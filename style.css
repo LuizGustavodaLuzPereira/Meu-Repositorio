@@ -1,0 +1,112 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0fdf4; 
+    color: #1a3021; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: #10b981; 
+    color: white;
+    width: 100%;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecfdf5;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #064e3b;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* --- MUDANÇA AQUI: Seções --- */
+section {
+    display: none; /* ESCONDE todas as seções por padrão */
+    max-width: 800px;
+    width: 90%;
+    background: white;
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #d1fae5;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    
+    /* Adiciona uma animação suave ao aparecer */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* MOSTRA a seção quando ela tiver a classe .ativa */
+section.ativa {
+    display: block; 
+}
+
+/* Animação de "fade" */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #059669;
+    margin-bottom: 1rem;
+}
+
+/* Botão Customizado */
+button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background-color: #059669;
+    transform: scale(1.05);
+}
+
+#resultado {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #047857;
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    padding: 2rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
